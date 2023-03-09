@@ -2,7 +2,11 @@
 
 <ul>
   <% @lists.each do |list|%>
-    <li><%= list.name%></li>
+    <li>
+      <%= list.name %>
+      <br>
+      <small><%= link_to "See bookmarks", list_path(list) %></small>
+    </li>
   <% end %>
 </ul>
 
