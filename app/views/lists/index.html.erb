@@ -1,13 +1,20 @@
-<h1>All Lists</h1>
 
-<ul>
-  <% @lists.each do |list|%>
-    <li>
-      <%= list.name %>
-      <br>
-      <small><%= link_to "See bookmarks", list_path(list) %></small>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
 
-<%= link_to "Create new list", new_list_path %>
+  <h1>All Lists</h1>
+
+  <ul>
+    <% @lists.each do |list|%>
+      <div class="card-product" >
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <%= list.name %>
+          <p><small><%= link_to "See bookmarks", list_path(list) %></small></p>
+        </div>
+      </div>
+
+    <% end %>
+  </ul>
+
+  <%= link_to "Create new list", new_list_path %>
+</div>
