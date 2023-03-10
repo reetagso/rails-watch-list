@@ -1,9 +1,9 @@
 <div class="container">
 
-  <%= form_with model: @list do |f| %>
+  <%= simple_form_for @list do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true} %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.submit %>
   <% end %>
 </div>
