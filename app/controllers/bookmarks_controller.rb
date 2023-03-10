@@ -29,7 +29,7 @@ class BookmarksController < ApplicationController
   end
 
   def bookmark_params
-    params.require(:bookmark).permit(:comment, photos: [])
+    params.require(:bookmark).permit(:comment, :photo)
   end
 
 end

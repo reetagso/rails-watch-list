@@ -7,6 +7,7 @@
     <li>
     <strong><%= Movie.find(bookmark.movie_id)[:title] %> </strong><br>
     <%= bookmark.comment %> <br>
+    <%= cl_image_tag bookmark.photo.key, height: 300, width: 400, crop: :fill %>
     <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure"}%>
     </li>
     <% end %>
